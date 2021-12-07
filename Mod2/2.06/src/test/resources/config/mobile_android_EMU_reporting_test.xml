@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android Mobile Demo Suite">
+
+    <test name="Simple Emulator Test Android" >
+        <classes>
+            <class name="tests.Mobile_Android_EMU_Reporting_Test"/>
+        </classes>
+    </test>
+</suite>
