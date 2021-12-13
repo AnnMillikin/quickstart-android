@@ -37,15 +37,21 @@ public class  Mobile_Android_EMU_Parallel_Test {
     public void setUp (Method method) throws Exception { // add later
         System.out.println("Sauce Android EMU App Test - Parallel - BeforeMethod hook");
         String methodName = method.getName();
-        String username = System.getenv("SAUCE_USERNAME");
-        String accesskey = System.getenv("SAUCE_ACCESS_KEY");
+        String username = "annmillikin";//System.getenv("SAUCE_USERNAME");
+        String accesskey = "9cb81ab8-8bc9-4c25-becc-435245809b6c";//System.getenv("SAUCE_ACCESS_KEY");
+        System.out.println("methodName: "+methodName);
+        System.out.println("username: "+username);
+        System.out.println("accesskey: "+accesskey);
+        
         String sauceUrl;
         if (region.equalsIgnoreCase("eu")) {
             sauceUrl = "@ondemand.eu-central-1.saucelabs.com:443";
         } else {
             sauceUrl = "@ondemand.us-west-1.saucelabs.com:443";
         }
+        System.out.println("sauceUrl: "+sauceUrl);
         String SAUCE_REMOTE_URL = "https://" + username + ":" + accesskey + sauceUrl + "/wd/hub";
+        System.out.println("SAUCE_REMOTE_URL: "+SAUCE_REMOTE_URL);
         url = new URL(SAUCE_REMOTE_URL);
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "Android Emulator");
@@ -55,8 +61,9 @@ public class  Mobile_Android_EMU_Parallel_Test {
         capabilities.setCapability("appWaitActivity", "com.swaglabsmobileapp.MainActivity");
         capabilities.setCapability("app", "storage:filename=" + APP);
         capabilities.setCapability("name", methodName);
-
+        System.out.println("before androidDriver line 65");
         androidDriver.set(new AndroidDriver(url, capabilities));// updated
+        System.out.println("after androidDriver line 65");
     }
 
     @AfterMethod
@@ -86,7 +93,7 @@ public class  Mobile_Android_EMU_Parallel_Test {
 
     @Test
     public void loginTestValidProblem () {
-        System.out.println("Sauce - Start loginTestValidProblem test");
+        System.out.println("Sauce - Start loginTestValidProblem test in Mobile_Android_EMU_Parallel_test.java");
 
         login("problem_user", "secret_sauce");
 

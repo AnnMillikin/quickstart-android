@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Android Mobile Demo Suite" parallel="methods" thread-count="10" verbose="1">
 
-    <test name="Simple Emulator Test Android" parallel="methods" enabled="true">
+    <test name="Simple Emulator Test Android" parallel="methods" enabled="false">
         <classes>
             <class name="tests.Mobile_Android_EMU_Parallel_Test"/>
         </classes>

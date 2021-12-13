@@ -76,7 +76,7 @@ public class Mobile_Android_EMU_Test {
 
         @Test
         public void loginTestValidProblem () {
-            System.out.println("Sauce - Start loginTestValidProblem test");
+            System.out.println("Sauce - Start loginTestValidProblem test in Mobile_Android_EMU_test.java");
 
             login("problem_user", "secret_sauce");
 

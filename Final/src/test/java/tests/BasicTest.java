@@ -19,7 +19,8 @@ import java.net.URL;
 
 public class BasicTest {
 
-    private static final String APP = "/Users/lindsaywalker/Documents/Example_Tests/Android.SauceLabs.Mobile.Sample.app.2.7.0.apk";
+    private static final String APP = "C:/Users/amillikin/git/MobileAutomationFramework/src/main/java/app/SSapp.apk"; 
+    //		"/Users/lindsaywalker/Documents/Example_Tests/Android.SauceLabs.Mobile.Sample.app.2.7.0.apk";
     private static final String APPIUM = "http://localhost:4723/wd/hub";
 
     private AndroidDriver driver;
@@ -56,7 +57,7 @@ public class BasicTest {
     public void loginToSwagLabsTestValid() {
         System.out.println("Sauce - Start loginToSwagLabsTestValid test");
 
-        login("standard_user", "secret_sauce");
+        login("annmillikin", "9cb81ab8-8bc9-4c25-becc-435245809b6c");
 
         // Verification
         Assert.assertTrue(isOnProductsPage());
@@ -64,7 +65,7 @@ public class BasicTest {
 
     @Test
     public void loginTestValidProblem() {
-        System.out.println("Sauce - Start loginTestValidProblem test");
+        System.out.println("Sauce - Start loginTestValidProblem test in BasicTest.java");
 
         login("problem_user", "secret_sauce");
 
