@@ -57,7 +57,7 @@ public class BasicTest {
     public void loginToSwagLabsTestValid() {
         System.out.println("Sauce - Start loginToSwagLabsTestValid test");
 
-        login("annmillikin", "9cb81ab8-8bc9-4c25-becc-435245809b6c");
+        login("annmillikin", "7823683c-b9c6-4bfd-bfa1-23d43e1297c8");// regenerated so this one is no longer valid
 
         // Verification
         Assert.assertTrue(isOnProductsPage());

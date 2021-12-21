@@ -50,7 +50,7 @@ public class  Mobile_Android_EMU_Parallel_Test {
             sauceUrl = "@ondemand.us-west-1.saucelabs.com:443";
         }
         System.out.println("sauceUrl: "+sauceUrl);
-        String SAUCE_REMOTE_URL = "https://" + username + ":" + accesskey + sauceUrl + "/wd/hub";
+        String SAUCE_REMOTE_URL = "https://annmillikin:7823683c-b9c6-4bfd-bfa1-23d43e1297c8@ondemand.us-west-1.saucelabs.com:443/wd/hub";
         System.out.println("SAUCE_REMOTE_URL: "+SAUCE_REMOTE_URL);
         url = new URL(SAUCE_REMOTE_URL);
         DesiredCapabilities capabilities = new DesiredCapabilities();
