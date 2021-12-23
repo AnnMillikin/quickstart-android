@@ -1,2 +1,2 @@
-tests/Config.class
-tests/BasicTest.class
+tests\BasicTest.class
+tests\Config.class
