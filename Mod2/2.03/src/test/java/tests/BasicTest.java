@@ -18,7 +18,8 @@ import java.net.URL;
 
 public class BasicTest {
 
-    private static final String APP = "/Users/lindsaywalker/Documents/Example_Tests/Android.SauceLabs.Mobile.Sample.app.2.7.0.apk";
+    private static final String APP = "C:/Users/amillikin/sample/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk";
+    		//"/Users/lindsaywalker/Documents/Example_Tests/Android.SauceLabs.Mobile.Sample.app.2.7.0.apk";
     private static final String APPIUM = "http://localhost:4723/wd/hub";
 
     private String sessionId;
@@ -34,7 +35,7 @@ public class BasicTest {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "Android Emulator"); //This will change to type of device e.g. Pixel 4 on Saucelabs
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("platformVersion","9.0" ); //add platformVersion
+        capabilities.setCapability("platformVersion","11.0" ); //add platformVersion
         capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("appWaitActivity", "com.swaglabsmobileapp.MainActivity");
         capabilities.setCapability("app", APP);
