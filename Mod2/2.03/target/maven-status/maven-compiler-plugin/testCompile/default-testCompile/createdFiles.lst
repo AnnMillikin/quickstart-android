@@ -1,3 +1,5 @@
 tests\Config.class
+tests\Mobile_Android_EMU_Reporting_Test.class
+tests\Mobile_Android_EMU_Parallel_Test.class
 tests\Mobile_Android_EMU_Test.class
 tests\BasicTest.class
