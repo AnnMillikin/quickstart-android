@@ -33,6 +33,8 @@ public class Mobile_Android_EMU_Test {
         System.out.println("Sauce Android Mobile - BeforeMethod hook"); //added
         String username = System.getenv("SAUCE_USERNAME");
         String accesskey = System.getenv("SAUCE_ACCESS_KEY");
+        System.out.println("username: "+ username);
+        System.out.println("accesskey: "+accesskey);
         String sauceUrl;
             if (region.equalsIgnoreCase("eu")) {
                 sauceUrl = "@ondemand.eu-central-1.saucelabs.com:443";
@@ -41,6 +43,7 @@ public class Mobile_Android_EMU_Test {
             }
         String SAUCE_REMOTE_URL = "https://" + username + ":" + accesskey + sauceUrl + "/wd/hub";
         url = new URL(SAUCE_REMOTE_URL);
+        System.out.println("SACUE_REMOTE_URL: "+ SAUCE_REMOTE_URL);
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "Android Emulator");
         capabilities.setCapability("platformName", "Android");
