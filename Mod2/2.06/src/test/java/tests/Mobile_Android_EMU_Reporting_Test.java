@@ -22,7 +22,7 @@ import static tests.Config.region;
 
 
 public class Mobile_Android_EMU_Reporting_Test {
-    private static final String APP = "Android.SauceLabs.Mobile.Sample.app.2.7.0.apk";
+    private static final String APP = "Android.SauceLabs.Mobile.Sample.app.2.7.1.apk";
     URL url; //added
 
     private AndroidDriver driver;
@@ -63,6 +63,7 @@ public class Mobile_Android_EMU_Reporting_Test {
             System.out.println("Sauce Android Mobile EMU Reporting Test - AfterMethod hook"); // added
             try {
                 if (driver != null) {
+                    //  to pass in the sauce:job-result to the Sauce Rest API:
                     ((JavascriptExecutor) driver).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed"));
                 }
             }finally {
