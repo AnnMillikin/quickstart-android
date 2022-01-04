@@ -21,9 +21,11 @@ import java.net.URL;
 import static tests.Config.region;
 
 public class Mobile_Android_EMU_Parallel_Test {
-    private static final String APP = "Android.SauceLabs.Mobile.Sample.app.2.7.0.apk";
+    private static final String APP = "Android.SauceLabs.Mobile.Sample.app.2.7.1.apk";
     URL url; //added
 
+    // creating threading in order to run tests in parallel
+    // also updated the mobile_android_EMU_parallel_tests.xml: parallel="methods" thread-count="10"
     private static ThreadLocal<AndroidDriver> androidDriver = new ThreadLocal<AndroidDriver>(); //added
 //    private AndroidDriver driver; //deleted
 
@@ -55,6 +57,8 @@ public class Mobile_Android_EMU_Parallel_Test {
         capabilities.setCapability("appWaitActivity", "com.swaglabsmobileapp.MainActivity");
         capabilities.setCapability("app","storage:filename=" + APP);
         capabilities.setCapability("name", methodName); //added
+
+        // replace the driver instantiation with a new one using the Java ThreadLocal object
         androidDriver.set(new AndroidDriver(url, capabilities));// updated
     }
 
@@ -66,6 +70,7 @@ public class Mobile_Android_EMU_Parallel_Test {
                     ((JavascriptExecutor) androidDriver.get()).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed")); //updated
                 }
             }finally {
+                //  access the androidDriver thread that was created and set with values in the setUp () method.
                 System.out.println("Sauce- released driver");
                 androidDriver.get().quit(); //updated
             }
@@ -112,7 +117,7 @@ public class Mobile_Android_EMU_Parallel_Test {
 
         public void login (String user, String pass){
 
-            WebDriverWait wait = new WebDriverWait(androidDriver.get(), 5); //updated
+            WebDriverWait wait = new WebDriverWait(androidDriver.get(), 10); //updated
             final WebElement usernameEdit = wait.until(ExpectedConditions.visibilityOfElementLocated(new MobileBy.ByAccessibilityId(usernameID)));
 
             usernameEdit.click();
