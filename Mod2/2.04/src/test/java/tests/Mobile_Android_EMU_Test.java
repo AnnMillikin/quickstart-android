@@ -18,7 +18,7 @@ import java.net.URL;
 import static tests.Config.region; // added
 
 public class Mobile_Android_EMU_Test {
-    private static final String APP = "Android.SauceLabs.Mobile.Sample.app.2.7.0.apk"; // changed from local .apk location
+    private static final String APP = "Android.SauceLabs.Mobile.Sample.app.2.7.1.apk"; // changed from local .apk location
     URL url; //added, deleted APPIUM
     private AndroidDriver driver;
 
@@ -43,9 +43,9 @@ public class Mobile_Android_EMU_Test {
             }
         String SAUCE_REMOTE_URL = "https://" + username + ":" + accesskey + sauceUrl + "/wd/hub";
         url = new URL(SAUCE_REMOTE_URL);
-        System.out.println("SACUE_REMOTE_URL: "+ SAUCE_REMOTE_URL);
+        System.out.println("SAUCE_REMOTE_URL: "+ SAUCE_REMOTE_URL);
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName", "Android Emulator");
+        capabilities.setCapability("deviceName", "Android GoogleAPI Emulator"); //Changed to GoogleAPI Emu
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("platformVersion", "8.0");
         capabilities.setCapability("automationName", "UiAutomator2");
