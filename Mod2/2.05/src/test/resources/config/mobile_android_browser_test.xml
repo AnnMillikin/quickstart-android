@@ -3,7 +3,7 @@
 
     <test name="Simple Emulator Test Android" >
         <classes>
-            <class name="tests.Mobile_Android_EMU_Test"/>
+            <class name="tests.Mobile_Android_Browser_Test"/>
         </classes>
     </test>
 </suite>
