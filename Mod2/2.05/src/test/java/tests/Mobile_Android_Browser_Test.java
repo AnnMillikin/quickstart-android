@@ -30,7 +30,7 @@
         By usernameInput = By.id("user-name");
         By passwordInput = By.id("password");
         By submitButton = By.className("btn_action");
-        By productTitle = By.className("product_label");
+        By productTitle = By.className("inventory_item_label");
 
 
         @BeforeMethod
