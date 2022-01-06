@@ -68,30 +68,19 @@
         }
 
         @Test
-        public void loginToSwagLabsTestValid() throws Exception {
+        public void loginToSwagLabsTestValid() {
             System.out.println("Sauce - Start loginToSwagLabsTestValid test");
 
             login("standard_user", "secret_sauce");
-            try {
-                Thread.sleep(10000);
-            } catch (java.lang.Exception e) {
-                e.printStackTrace();
-            }
-
-            // Verification
+                        // Verification
             Assert.assertTrue(isOnProductsPage());
         }
 
         @Test
-        public void loginTestValidProblem() throws Exception {
+        public void loginTestValidProblem() {
             System.out.println("Sauce - Start loginTestValidProblem test");
 
             login("problem_user", "secret_sauce");
-            try {
-                Thread.sleep(10000);
-            } catch (java.lang.Exception e) {
-                e.printStackTrace();
-            }
 
             // Verification - we on Product page
             Assert.assertTrue(isOnProductsPage());
